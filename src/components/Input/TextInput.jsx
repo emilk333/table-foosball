@@ -1,12 +1,20 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 
 
-export const TextInput = () => {
+export const TextInput = (props) => {
+    const { label, callback, type, placeholder } = props
+    const [value, setvalue] = useState("")
+
+    const handleInput = (newValue) => {
+        setvalue(() => newValue)
+        callback(newValue, type)
+    }
+
     return (
         <div>
-           <label htmlFor="name">Name (4 to 8 characters):</label>
-           <input type="text" id="name" name="name"/>
+           <label htmlFor={label}>{label}</label>
+           <input placeholder={placeholder} onInput={(e) => handleInput(e.target.value)} type="text" id={label} name={label} value={value}/>
         </div>
     )
 }
