@@ -17,7 +17,7 @@ const globalReducer = (store, action) => {
                         ...team,
                         name : payload.name ? payload.name : team.name,
                         totalWon : payload.totalWon ? payload.totalWon : team.totalWon,
-                        totalLost : payload.totalLost ? payload.totalLost : team.totalLost
+                        totalLost : payload.totalLost != undefined && payload.totalLost != null ? payload.totalLost : team.totalLost
                     }
                 } else {
                     return team

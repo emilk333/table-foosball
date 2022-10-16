@@ -16,7 +16,7 @@ const AppWrapper = () => {
 		/**
 		 * This simulates getting persisted data from a backend. Imagine an admin creating the tournament plan and saving it.
 		 */
-		fetchData('/data/tournamentData.json').then(res => {
+		fetchData('src/data/tournamentData.json').then(res => {
 			context.dispatchStoreValues({ type: 'SET_TOURNAMENT_DATA', payload : ACLMapper(res) })
 		})
 	},[])
