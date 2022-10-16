@@ -2,7 +2,6 @@
     {
         "teamId" : 1,
         "name" : "Team A",
-        "isLeader" : true,
         "totalWon" : 2,
         "totalLost" : 0,
         "games" : [
@@ -25,7 +24,6 @@
     {
         "teamId" : 2,
         "name" : "Team B",
-        "isLeader" : false,
         "totalWon" : 1,
         "totalLost" : 1,
         "games" : [
@@ -48,55 +46,8 @@
     {
         "teamId" : 3,
         "name" : "Team C",
-        "isLeader" : false,
         "totalWon" : 0,
         "totalLost" : 2,
-        "games" : [
-            {
-                "gameId" : 5,
-                "played" : true,
-                "opponentName" : "Team A",
-                "score" : "10-5",
-                "won" : true
-            },
-            {
-                "gameId" : 6,
-                "played" : true,
-                "opponentName" : "Team B",
-                "score" : "8-10",
-                "won" : false
-            }
-        ]
-    },
-    {
-        "teamId" : 4,
-        "name" : "Team D",
-        "isLeader" : false,
-        "totalWon" : 0,
-        "totalLost" : 2,
-        "games" : [
-            {
-                "gameId" : 5,
-                "played" : true,
-                "opponentName" : "Team A",
-                "score" : "10-5",
-                "won" : true
-            },
-            {
-                "gameId" : 6,
-                "played" : true,
-                "opponentName" : "Team B",
-                "score" : "8-10",
-                "won" : false
-            }
-        ]
-    },
-    {
-        "teamId" : 5,
-        "name" : "Team X",
-        "isLeader" : false,
-        "totalWon" : 2,
-        "totalLost" : 11,
         "games" : [
             {
                 "gameId" : 5,

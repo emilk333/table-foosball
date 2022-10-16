@@ -8,7 +8,7 @@ export const Scoreboard = () => {
     const tableData = context.store
 
     return (
-        <section>
+        <section className="tt-scoreboard">
             <Table data={tableData}/>
         </section>
     )

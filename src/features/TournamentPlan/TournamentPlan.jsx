@@ -30,12 +30,14 @@ export const TournamentPlan = () => {
         }
 
         return (
-            <div>
+            <div class="tt-tournament-plan__edit-wrapper">
                 <TextInput label="Name" callback={modifyTeamStatusByType} type="name" placeholder={team.name}/>
                 <TextInput label="Won" callback={modifyTeamStatusByType} type="totalWon" placeholder={team.totalWon}/>
                 <TextInput label="Lost" callback={modifyTeamStatusByType} type="totalLost" placeholder={team.totalLost}/>
-                <button onClick={() => dispatchTeamConfigDataToModify()}>Save</button>
-                <button onClick={() => setTeamToEdit(null)}>Cancel</button>
+                <div>
+                    <button className="tt-button" onClick={() => dispatchTeamConfigDataToModify()}>Save</button>
+                    <button className="tt-button" onClick={() => setTeamToEdit(null)}>Cancel</button>
+                </div>
             </div>
         )
     }
@@ -44,7 +46,7 @@ export const TournamentPlan = () => {
         <section>
 
             Select a team to edit: 
-            {teamData.map((team, index) => <button key={index} onClick={() => setTeamToEdit(team.teamId)}>{team.name}</button>)}
+            {teamData.map((team, index) => <button className={"tt-button" + (teamToEdit === team.teamId ? " tt-button--selected" : '')} key={index} onClick={() => setTeamToEdit(team.teamId)}>{team.name}</button>)}
 
             {teamData.map((team, index) => {
                 return (

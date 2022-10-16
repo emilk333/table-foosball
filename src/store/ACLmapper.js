@@ -10,7 +10,6 @@ export const ACLMapper = (data) => {
         return {
             "teamId" : team.teamId ?? 'error',
             "name" : team.name ?? '-',
-            "isLeader" : team.isLeader ?? false,
             "totalWon" : team.totalWon ?? '-',
             "totalLost" : team.totalLost ?? '-',
             "totalPoints" : team.totalPoints ?? '-',

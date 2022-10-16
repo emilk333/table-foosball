@@ -12,9 +12,9 @@ export const TextInput = (props) => {
     }
 
     return (
-        <div>
+        <div className="tt-text-input__wrapper">
            <label htmlFor={label}>{label}</label>
-           <input placeholder={placeholder} onInput={(e) => handleInput(e.target.value)} type="text" id={label} name={label} value={value}/>
+           <input className="tt-text-input" placeholder={placeholder} onInput={(e) => handleInput(e.target.value)} type="text" id={label} name={label} value={value}/>
         </div>
     )
 }

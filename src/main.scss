@@ -1,5 +1,79 @@
+//features
+@import "./features/Scoreboard/Scoreboard.scss";
+@import "./features/TournamentPlan/TournamentPlan";
 
+//components
+@import "./components/Table/Table";
+@import "./components/Input/TextInput";
 
-h1 {
-    color: red;
+//foundation
+@import "./foundation/scss/normalize";
+
+html {
+    font-size: 10px; //1rem = 10px
+}
+
+h1, h2, h3, h4, h5, p, span, div, button, label {
+    font-size: 1.6rem;
+    color: #263158;
+    font-family: 'Inter', sans-serif;
+}
+
+.tt-button {
+    border: 1px solid #ebecef;
+    background-color: transparent;
+    border-radius: 6px;
+    margin: 1rem;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #f8f9fc;
+    }
+
+    &:focus, :focus-visible, :active {
+        border: 2px solid #3b6fff;
+        outline: none;
+    }
+
+    &--selected {
+        background-color: #f8f9fc;
+        border: 2px solid #3b6fff;
+    }
+}
+
+.tt-nav {
+    margin-bottom: 5rem;
+}
+
+.tt-tournament-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70rem;
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+
+    &__container {
+        padding-left: 6rem;
+        text-align: left;
+
+        @media only screen and (max-width: 600px) {
+            padding-left: 0rem;
+        }
+
+        h1 {
+            font-size: 3.6rem;
+            margin-bottom: 0;
+
+            @media only screen and (max-width: 600px) {
+                font-size: 2.6rem;
+            }
+        }
+
+        p {
+            margin: 1.5rem 0 2rem 1rem;
+        }
+    }
 }

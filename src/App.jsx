@@ -23,11 +23,22 @@ const AppWrapper = () => {
 
 	if (context.store) {
 		return (
-			<div>
-				<h1>Signifly's Great Foosball Tournmanet App</h1>
-				<div>
-					<button onClick={() => setScreenToDisplay('scoreboard')}>Scoreboard</button>
-					<button onClick={() => setScreenToDisplay('tournamentPlan')}>Tournament Plan</button>
+			<div className="tt-tournament-app">
+				<div className="tt-tournament-app__container">
+					<h1>⚽ Tournament Generator </h1>
+					<p>Follow your favorite team on the scoreboard or use the Tournament Plan tab to edit teams </p>
+					<div className="tt-nav">
+						<button 
+							className={"tt-button" + (screenToDisplay === 'scoreboard' ? ' tt-button--selected': '')} 
+							onClick={() => setScreenToDisplay('scoreboard')}>
+								Scoreboard
+						</button>
+						<button 
+							className={"tt-button" + (screenToDisplay === 'tournamentPlan' ? ' tt-button--selected': '')} 
+							onClick={() => setScreenToDisplay('tournamentPlan')}>
+								Tournament Plan
+						</button>
+					</div>
 				</div>
 				{screenToDisplay === 'scoreboard' && <Scoreboard />}
 				{screenToDisplay === 'tournamentPlan' && <TournamentPlan />}
